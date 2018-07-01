@@ -1,0 +1,1 @@
+# Conan.Plugin.NullGuard
