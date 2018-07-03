@@ -1,0 +1,36 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+version: 1.0.{build}
+image: Visual Studio 2017
+
+#---------------------------------#
+#              build              #
+#---------------------------------#
+
+before_build:
+- ps: dotnet --version
+
+build_script:
+- ps: >-
+    dotnet build ./src/Conan.Plugin.NullGuard/Conan.Plugin.NullGuard.csproj -c Release
+
+    dotnet build -c Release
+
+#---------------------------------#
+#              tests              #
+#---------------------------------#
+
+test_script:
+- ps: dotnet test ./test/Conan.Plugin.NullGuard.Tests/Conan.Plugin.NullGuard.Tests.csproj -c Release --no-restore
+
+after_test:
+- ps: dotnet pack -c Release
+
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+
+artifacts:
+- path: "'**\\*.nupkg'"
