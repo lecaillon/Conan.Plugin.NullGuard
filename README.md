@@ -54,7 +54,7 @@ public class Person
 }
 ```
 
-You can see rewritten documents on the disk in a sub directory of the obj folder or using ILSpy.
+3. You can see rewritten documents on the disk in a sub directory of the obj folder or using ILSpy. Example: `\obj\Debug\netcoreapp2.1\GeneratedFiles\Microsoft.CodeAnalysis.CSharp.Analyzers\Conan.Person.cs`
 
 ## Licensing
 
