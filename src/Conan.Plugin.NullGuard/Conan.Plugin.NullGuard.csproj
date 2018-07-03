@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Version>2.8.2-alpha5</Version>
+    <Authors>Philippe Lécaillon</Authors>
+    <Company />
+    <Product />
+    <Description>Conan plugin that adds null guard code for all methods and constructors parameters preceded by a [NonNull] attribute.</Description>
+    <PackageLicenseUrl>https://github.com/lecaillon/Conan.Plugin.NullGuard/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/lecaillon/Conan.Plugin.NullGuard</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/conan-roslyn/Conan/master/img/conan.png</PackageIconUrl>
+    <RepositoryType />
+    <PackageTags>Conan, Plugins, CSharp, Guard, NonNull, Roslyn, CodeAnalysis, CodeGeneration</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Conan.CodeAnalysis" Version="2.8.2-alpha5" />
+    <PackageReference Include="AnalyzerPack" Version="1.*" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>
